@@ -1,0 +1,19 @@
+<div class="container">
+    <div class="jumbotron">
+
+
+        <app-form (addUser)="check($event)"></app-form>
+
+        <div class="jumbotron">
+            <blockquote class="text-center text-lg">
+                <img src="{{repos.avatar_url}}" width="150px" >
+                <h4>Username: {{repos.login}}</h4>
+                <h4>Repository: {{repos.public_repos}}</h4>
+                <h4>Followers: {{repos.followers}}</h4>
+                <h4>Following: {{repos.following}}</h4>
+                <h4 appStrikethrough>Creation-Date: {{repos.created_at}}</h4>
+                <h4><a href="{{repos.html_url}}"><button type="submit" class="btn-warning">profile</button> </a>
+                </h4>
+            </blockquote>
+        </div>
+    </div>

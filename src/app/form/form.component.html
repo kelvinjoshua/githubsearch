@@ -1,0 +1,13 @@
+<div class="jumbotron">
+    <form (ngSubmit)="submitUser()"><!--created  a function for user submit-->
+        <h3>Github-Username</h3>
+        <div class="form-group">
+            <input type="text" class="form-control" id="user" [(ngModel)]="newUser.username" name="username"
+                #username="ngModel" required><br><br>
+            <button  class="btn btn-warning" type="submit" id="searchButton"> Search</button>
+            <div [hidden]="username.valid ||username.pristine" class="alert alert-danger">
+                <p>Please enter a github username</p>
+            </div>
+        </div>
+    </form>
+</div>
